@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity ^0.8.12;
 
-abstract contract MoreComplexSessionManager {
+abstract contract MoreComplexAccountManager {
     event SessionCreated(address _sessionUser, uint256 _nbSteps, address[] dest, bytes[] data);
     event SessionRemoved(address indexed sessionUser);
 

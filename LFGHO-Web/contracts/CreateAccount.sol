@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0
-pragma solidity ^0.8.12;
+pragma solidity ^0.8.19;
 
 /* solhint-disable avoid-low-level-calls */
 /* solhint-disable no-inline-assembly */
@@ -11,9 +11,9 @@ import "@openzeppelin/contracts/proxy/utils/UUPSUpgradeable.sol";
 import "@account-abstraction/contracts/core/BaseAccount.sol";
 import "@account-abstraction/contracts/samples/callback/TokenCallbackHandler.sol";
 
-import "./SessionManager.sol";
+import "./AccountManager.sol";
 
-contract CreateAccount is BaseAccount, TokenCallbackHandler, UUPSUpgradeable, Initializable, SessionManager {
+contract CreateAccount is BaseAccount, TokenCallbackHandler, UUPSUpgradeable, Initializable, AccountManager {
     using ECDSA for bytes32;
 
     address public owner;

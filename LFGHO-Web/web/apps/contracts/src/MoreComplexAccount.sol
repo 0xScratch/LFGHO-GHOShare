@@ -12,14 +12,14 @@ import "@openzeppelin/contracts/proxy/utils/UUPSUpgradeable.sol";
 import "@account-abstraction/contracts/core/BaseAccount.sol";
 import "@account-abstraction/contracts/samples/callback/TokenCallbackHandler.sol";
 
-import "./MoreComplexSessionManager.sol";
+import "./MoreComplexAccountManager.sol";
 
 contract MoreComplexAccount is
     BaseAccount,
     TokenCallbackHandler,
     UUPSUpgradeable,
     Initializable,
-    MoreComplexSessionManager
+    MoreComplexAccountManager
 {
     using ECDSA for bytes32;
 

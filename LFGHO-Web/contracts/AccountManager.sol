@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0
-pragma solidity ^0.8.12;
+pragma solidity ^0.8.19;
 
-abstract contract SessionManager {
+abstract contract AccountManager {
     event SessionCreated(address indexed sessionUser, uint256 startFrom, uint256 validUntil, uint256 totalAmount);
     event SessionRemoved(
         address indexed sessionUser,

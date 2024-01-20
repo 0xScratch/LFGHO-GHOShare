@@ -12,9 +12,9 @@ import "@openzeppelin/contracts/proxy/utils/UUPSUpgradeable.sol";
 import "@account-abstraction/contracts/core/BaseAccount.sol";
 import "@account-abstraction/contracts/samples/callback/TokenCallbackHandler.sol";
 
-import "./SessionManager.sol";
+import "./AccountManager.sol";
 
-contract ComplexAccount is BaseAccount, TokenCallbackHandler, UUPSUpgradeable, Initializable, SessionManager {
+contract ComplexAccount is BaseAccount, TokenCallbackHandler, UUPSUpgradeable, Initializable, AccountManager {
     using ECDSA for bytes32;
 
     address public owner;

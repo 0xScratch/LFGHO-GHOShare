@@ -61,6 +61,15 @@ struct HomeView: View {
                 .headerProminence(.increased)
             }
             .navigationTitle("Home")
+            .toolbar {
+                ToolbarItemGroup(placement: .topBarTrailing) {
+                    Button {
+                        
+                    } label: {
+                        Image(systemName: "plus")
+                    }
+                }
+            }
         }
     }
 }

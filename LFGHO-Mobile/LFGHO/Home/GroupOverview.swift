@@ -8,7 +8,12 @@
 import SwiftUI
 
 struct GroupOverview: View {
+    
     var group: Group
+    let tokens = ["AAV", "USDC", "GHO"]
+    
+    @State private var selectedToken: String = "GHO"
+    
     var body: some View {
         VStack {
             List {
@@ -20,7 +25,7 @@ struct GroupOverview: View {
                             .frame(maxWidth: .infinity)
                             .frame(height: 180)
                             .clipped()
-                            .brightness(-0.3)
+                            .brightness(-0.2)
                         VStack {
                             Text("You owe")
                                 .font(.system(size: 18, weight: .semibold))
@@ -76,12 +81,42 @@ struct GroupOverview: View {
                         Text("Pay ") + Text("Jeevan").bold() + Text(" by 31.1.2024")
                     }
                     HStack {
-                        Text("")
+                        
+                        Picker("Select token", selection: $selectedToken) {
+                            ForEach(tokens, id: \.self) { token in
+                                Text(token).tag(token)
+                            }
+                        }
+                        .pickerStyle(MenuPickerStyle())
+                    }
+                    HStack {
+                        Text("Borrow GHO")
+                        
+                        Spacer()
+                        
+                        Button {
+                            
+                        } label: {
+                            Text("Borrow")
+                                .foregroundStyle(.blue)
+                        }
+                    }
+                    HStack {
+                        Text("Pay 320 GHO ")
+                        
+                        Spacer()
+                        
+                        Button {
+                            
+                        } label: {
+                            Text("Pay")
+                                .foregroundStyle(.blue)
+                        }
                     }
                 } header: {
                     Text("Transactions")
                 } footer: {
-                    Text("Transactions")
+                    Text("You can choose to pay right now or borrow GHO using credit delegation.")
                 }
                 .headerProminence(.increased)
                 

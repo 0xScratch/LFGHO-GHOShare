@@ -12,6 +12,13 @@
 		DA37FA722B5C141900AB6541 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA37FA712B5C141900AB6541 /* ProfileView.swift */; };
 		DA37FA742B5C142100AB6541 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA37FA732B5C142100AB6541 /* ActivityView.swift */; };
 		DA37FA762B5C1A3600AB6541 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA37FA752B5C1A3600AB6541 /* Group.swift */; };
+		DA37FA7A2B5C27B500AB6541 /* metamask-ios-sdk in Frameworks */ = {isa = PBXBuildFile; productRef = DA37FA792B5C27B500AB6541 /* metamask-ios-sdk */; };
+		DA37FA7D2B5C295D00AB6541 /* GroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA37FA7C2B5C295D00AB6541 /* GroupView.swift */; };
+		DA37FA7F2B5C2DE000AB6541 /* GroupOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA37FA7E2B5C2DE000AB6541 /* GroupOverview.swift */; };
+		DA37FA822B5C339F00AB6541 /* MemberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA37FA812B5C339F00AB6541 /* MemberView.swift */; };
+		DA37FA842B5C33AB00AB6541 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA37FA832B5C33AB00AB6541 /* Member.swift */; };
+		DA37FA872B5C358F00AB6541 /* ExpenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA37FA862B5C358F00AB6541 /* ExpenseView.swift */; };
+		DA37FA892B5C359500AB6541 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA37FA882B5C359500AB6541 /* Expense.swift */; };
 		DAC103B52B5AC6FC00CE4674 /* LFGHOApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC103B42B5AC6FC00CE4674 /* LFGHOApp.swift */; };
 		DAC103B72B5AC6FC00CE4674 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC103B62B5AC6FC00CE4674 /* ContentView.swift */; };
 		DAC103B92B5AC6FD00CE4674 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAC103B82B5AC6FD00CE4674 /* Assets.xcassets */; };
@@ -24,6 +31,12 @@
 		DA37FA712B5C141900AB6541 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		DA37FA732B5C142100AB6541 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		DA37FA752B5C1A3600AB6541 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		DA37FA7C2B5C295D00AB6541 /* GroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupView.swift; sourceTree = "<group>"; };
+		DA37FA7E2B5C2DE000AB6541 /* GroupOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupOverview.swift; sourceTree = "<group>"; };
+		DA37FA812B5C339F00AB6541 /* MemberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberView.swift; sourceTree = "<group>"; };
+		DA37FA832B5C33AB00AB6541 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
+		DA37FA862B5C358F00AB6541 /* ExpenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseView.swift; sourceTree = "<group>"; };
+		DA37FA882B5C359500AB6541 /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
 		DAC103B12B5AC6FC00CE4674 /* LFGHO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LFGHO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAC103B42B5AC6FC00CE4674 /* LFGHOApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LFGHOApp.swift; sourceTree = "<group>"; };
 		DAC103B62B5AC6FC00CE4674 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -36,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA37FA7A2B5C27B500AB6541 /* metamask-ios-sdk in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,8 +59,12 @@
 		DA37FA6C2B5C13BE00AB6541 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				DA37FA852B5C358400AB6541 /* Expenses */,
+				DA37FA802B5C339700AB6541 /* Members */,
 				DA37FA6F2B5C141100AB6541 /* HomeView.swift */,
 				DA37FA752B5C1A3600AB6541 /* Group.swift */,
+				DA37FA7C2B5C295D00AB6541 /* GroupView.swift */,
+				DA37FA7E2B5C2DE000AB6541 /* GroupOverview.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -65,6 +83,24 @@
 				DA37FA732B5C142100AB6541 /* ActivityView.swift */,
 			);
 			path = Activity;
+			sourceTree = "<group>";
+		};
+		DA37FA802B5C339700AB6541 /* Members */ = {
+			isa = PBXGroup;
+			children = (
+				DA37FA812B5C339F00AB6541 /* MemberView.swift */,
+				DA37FA832B5C33AB00AB6541 /* Member.swift */,
+			);
+			path = Members;
+			sourceTree = "<group>";
+		};
+		DA37FA852B5C358400AB6541 /* Expenses */ = {
+			isa = PBXGroup;
+			children = (
+				DA37FA862B5C358F00AB6541 /* ExpenseView.swift */,
+				DA37FA882B5C359500AB6541 /* Expense.swift */,
+			);
+			path = Expenses;
 			sourceTree = "<group>";
 		};
 		DAC103A82B5AC6FC00CE4674 = {
@@ -123,6 +159,7 @@
 			);
 			name = LFGHO;
 			packageProductDependencies = (
+				DA37FA792B5C27B500AB6541 /* metamask-ios-sdk */,
 			);
 			productName = LFGHO;
 			productReference = DAC103B12B5AC6FC00CE4674 /* LFGHO.app */;
@@ -153,7 +190,7 @@
 			);
 			mainGroup = DAC103A82B5AC6FC00CE4674;
 			packageReferences = (
-				DA37FA652B5AD57A00AB6541 /* XCRemoteSwiftPackageReference "metamask-ios-sdk" */,
+				DA37FA782B5C27B500AB6541 /* XCRemoteSwiftPackageReference "metamask-ios-sdk" */,
 			);
 			productRefGroup = DAC103B22B5AC6FC00CE4674 /* Products */;
 			projectDirPath = "";
@@ -183,11 +220,17 @@
 			files = (
 				DA37FA762B5C1A3600AB6541 /* Group.swift in Sources */,
 				DAC103B72B5AC6FC00CE4674 /* ContentView.swift in Sources */,
+				DA37FA7D2B5C295D00AB6541 /* GroupView.swift in Sources */,
 				DA37FA702B5C141100AB6541 /* HomeView.swift in Sources */,
 				DA37FA722B5C141900AB6541 /* ProfileView.swift in Sources */,
+				DA37FA7F2B5C2DE000AB6541 /* GroupOverview.swift in Sources */,
 				DA37FA6B2B5C139500AB6541 /* TabBarView.swift in Sources */,
 				DAC103B52B5AC6FC00CE4674 /* LFGHOApp.swift in Sources */,
+				DA37FA822B5C339F00AB6541 /* MemberView.swift in Sources */,
 				DA37FA742B5C142100AB6541 /* ActivityView.swift in Sources */,
+				DA37FA842B5C33AB00AB6541 /* Member.swift in Sources */,
+				DA37FA892B5C359500AB6541 /* Expense.swift in Sources */,
+				DA37FA872B5C358F00AB6541 /* ExpenseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,15 +438,23 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		DA37FA652B5AD57A00AB6541 /* XCRemoteSwiftPackageReference "metamask-ios-sdk" */ = {
+		DA37FA782B5C27B500AB6541 /* XCRemoteSwiftPackageReference "metamask-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/MetaMask/metamask-ios-sdk";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.5.0;
+				kind = exactVersion;
+				version = 0.3.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DA37FA792B5C27B500AB6541 /* metamask-ios-sdk */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA37FA782B5C27B500AB6541 /* XCRemoteSwiftPackageReference "metamask-ios-sdk" */;
+			productName = "metamask-ios-sdk";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DAC103A92B5AC6FC00CE4674 /* Project object */;
 }

@@ -1,5 +1,5 @@
 //
-//  HomeView.swift
+//  GroupOverview.swift
 //  LFGHO
 //
 //  Created by Artemiy Malyshau on 20/01/2024.
@@ -7,9 +7,10 @@
 
 import SwiftUI
 
-struct HomeView: View {
+struct GroupOverview: View {
+    var group: Group
     var body: some View {
-        NavigationView {
+        VStack {
             List {
                 Section {
                     ZStack(alignment: .bottomLeading) {
@@ -20,7 +21,7 @@ struct HomeView: View {
                             .frame(height: 180)
                             .clipped()
                         VStack {
-                            Text("In total, you owe")
+                            Text("You owe")
                                 .font(.system(size: 18, weight: .semibold))
                                 .padding(.top, 20)
                                 .padding(.bottom, 4)
@@ -42,30 +43,40 @@ struct HomeView: View {
                 .cornerRadius(20)
                 
                 Section {
-                    ForEach(groups, id:\.id) { group in
-                        NavigationLink(destination: GroupOverview(group: group)) {
-                            GroupView(group: group)
-                        }
+                    ForEach(members, id: \.id) { member in
+                        MemberView(member: member)
+                    }
+                    HStack {
+                        Image(systemName: "plus")
+                        
+                        Text("Add members")
                     }
                 } header: {
-                    HStack {
-                        Text("Groups")
-                        
-                        Spacer()
-                        
-                        Text("See all")
-                            .font(.system(size: 16))
-                            .foregroundStyle(.blue)
-                    }
+                    Text("Members")
+                }
+                .headerProminence(.increased)
+                
+                Section {
+                    Text("Hello")
+                } header: {
+                    Text("Expenses")
+                }
+                .headerProminence(.increased)
+                
+                Section {
+                    Text("Hello")
+                } header: {
+                    Text("Transactions")
                 }
                 .headerProminence(.increased)
             }
-            .navigationTitle("Home")
+            .navigationTitle(group.name)
         }
     }
 }
 
 #Preview {
-    HomeView()
+    GroupOverview(group: groups[0])
         .preferredColorScheme(.dark)
 }
+

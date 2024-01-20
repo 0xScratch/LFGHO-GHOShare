@@ -18,7 +18,7 @@ struct TabBarView: View {
             
             ActivityView()
                 .tabItem {
-                    Label("Browse", systemImage: "clock.fill")
+                    Label("Activity", systemImage: "clock.fill")
                 }
             
             ProfileView()

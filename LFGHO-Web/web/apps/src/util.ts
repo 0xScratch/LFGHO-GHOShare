@@ -1,0 +1,22 @@
+import { BUNDLER_CLIENT, PAYMASTER_CLIENT, PUBLIC_CLIENT } from './clients-ts';
+import {
+  ENTRY_POINT_ADDRESSES,
+  ACCOUNT_FACTORY_ADDRESSES,
+  SUPPORTED_CHAINS,
+  MOCK_ERC_721,
+} from './config';
+
+export const getChainConfig = (chainId: SUPPORTED_CHAINS) => {
+
+  const SIMPLE_ACCOUNT_FACTORY_ADDRESS = ACCOUNT_FACTORY_ADDRESSES[chainId];
+
+  const ENTRY_POINT_ADDRESS = ENTRY_POINT_ADDRESSES[chainId];
+
+  const NFT_ADDRESS = MOCK_ERC_721[chainId];
+
+  return {
+    SIMPLE_ACCOUNT_FACTORY_ADDRESS,
+    ENTRY_POINT_ADDRESS,
+    NFT_ADDRESS,
+  };
+};

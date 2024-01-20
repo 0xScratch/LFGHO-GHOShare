@@ -41,4 +41,4 @@ const getPublicClient = (rpc: string, chain: Chain) =>
 
 export const PUBLIC_CLIENT = {
   [sepolia.id]: getPublicClient(sepolia.rpcUrls.default.http[0], sepolia),
-} satisfies Record<SUPPORTED_CHAINS, any>;
+} satisfies Record<SUPPORTED_CHAINS, any>; 

@@ -1,6 +1,9 @@
 # Name of App
 Submission for LFGHO Hackahton
 
+# Main Features:
+- Credit Delegation Vault for Group Expense management
+
 # Home
 ### Expenses
 The expenses tab is the users collection of groups for expense splitting. A [credit delegation vault](https://github.com/nkoorty/lfgho/blob/main/LFGHO-Web/contracts/ExpensesVault.sol) is used for expense splitting and settlement with Aave's GHO. Depositors can delegate their credit lines to other and has been adopted into a vault contract. Depositors provide liquididty for the expense to be paid by depositing assets like GHO into the Aave protocol. They can then delegate their credit lines to the vault contract which acts on behalf of the group for expense management. The vault acts as the borrower to borrow funds against the deposited collateral up to the delegated limit. 

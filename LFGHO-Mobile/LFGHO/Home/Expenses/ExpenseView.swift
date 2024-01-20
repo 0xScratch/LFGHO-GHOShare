@@ -8,11 +8,29 @@
 import SwiftUI
 
 struct ExpenseView: View {
+    var expense: Expense
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack(spacing: 12) {
+            Image(systemName: "dollarsign")
+                
+            
+            VStack(alignment: .leading) {
+                Text(expense.title)
+                
+                Text(expense.name)
+                    .font(.caption)
+                    .bold()
+            }
+            
+            Spacer()
+            
+            Text("$\(String(format: "%.2f", expense.amount))")
+                .bold()
+        }
     }
 }
 
 #Preview {
-    ExpenseView()
+    ExpenseView(expense: expenses[0])
+        .preferredColorScheme(.dark)
 }

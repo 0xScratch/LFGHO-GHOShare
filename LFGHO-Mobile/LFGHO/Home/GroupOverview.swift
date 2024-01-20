@@ -14,12 +14,13 @@ struct GroupOverview: View {
             List {
                 Section {
                     ZStack(alignment: .bottomLeading) {
-                        Image("bg_aave")
+                        Image("bg_aave_2")
                             .resizable()
                             .scaledToFill()
                             .frame(maxWidth: .infinity)
                             .frame(height: 180)
                             .clipped()
+                            .brightness(-0.3)
                         VStack {
                             Text("You owe")
                                 .font(.system(size: 18, weight: .semibold))
@@ -57,18 +58,33 @@ struct GroupOverview: View {
                 .headerProminence(.increased)
                 
                 Section {
-                    Text("Hello")
+                    ForEach(expenses, id: \.id) { expense in
+                        ExpenseView(expense: expense)
+                    }
+                    HStack {
+                        Image(systemName: "plus")
+                        
+                        Text("Add expense")
+                    }
                 } header: {
                     Text("Expenses")
                 }
                 .headerProminence(.increased)
                 
                 Section {
-                    Text("Hello")
+                    HStack {
+                        Text("Pay ") + Text("Jeevan").bold() + Text(" by 31.1.2024")
+                    }
+                    HStack {
+                        Text("")
+                    }
                 } header: {
+                    Text("Transactions")
+                } footer: {
                     Text("Transactions")
                 }
                 .headerProminence(.increased)
+                
             }
             .navigationTitle(group.name)
         }

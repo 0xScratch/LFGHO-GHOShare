@@ -24,7 +24,8 @@ GhoShare onboards the market of iOS users into the Aave ecosystem and incentivis
 
 # Video
 
-[![Alt text for your video](image-url)](https://youtu.be/peU-QWqdiw8)
+[![Video Thumbnail](https://img.youtube.com/vi/peU-QWqdiw8/maxresdefault.jpg)](https://youtu.be/peU-QWqdiw8)
+
 
 # Workflow
 When you download the app, you'll first be prompted to sign up or log in. You have two options for logging in: using a Metamask account or creating a new wallet through GhoShare's account abstraction and EIP 4337 smart accounts. Your wallet is secured with biometric authentication, using Apple's FaceID.

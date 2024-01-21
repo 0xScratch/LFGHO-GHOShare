@@ -7,7 +7,7 @@
 GhoShare is an iOS app created to address the spesific shortcoming in current expense splitting apps by enabling decentralised direct in-app settlements of payments using credit delegation, token swapping and cross-network transactions. Secured by biometric authentication and EIP 4337 smart accounts.
 
 
-# 👻 Main Features
+# Main Features
 - Custom payment protocol using payment contracts, Chainlink CCIP for cross-network transactions and 1inch fork for token swapping.
 - Credit Delegation Vault for group expense management.
 - EIP 2612 Permit function to allow for signature based pre-approval of funds for expenses by the group leader.
@@ -33,9 +33,9 @@ GhoShare is an iOS app created to address the spesific shortcoming in current ex
 # Workflow
 
 
-# Profile
 
-# 👥 The GhoShare team
+
+# The GhoShare team
 - [Jeevan Jutla](https://www.linkedin.com/in/jeevan-jutla/) - Backend Developer, prev Binance Security Engineer
 - [Artemiy Malyshau](https://www.linkedin.com/in/artemiy-malyshau/) - Frontend Developer, Imperial CS and Engineering MSc 
 

@@ -24,8 +24,13 @@ struct ExpenseView: View {
             
             Spacer()
             
-            Text("$\(String(format: "%.2f", expense.amount))")
-                .bold()
+            VStack {
+                Text("$\(String(format: "%.2f", expense.amount))")
+                    .bold()
+                
+                Text("\(String(format: "%.2f", expense.amount)) GHO")
+                    .font(.caption)
+            }
         }
     }
 }

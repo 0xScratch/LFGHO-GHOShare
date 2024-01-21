@@ -12,6 +12,8 @@ import Combine
 
 struct LoginView: View {
     
+    @ObservedObject var settings = Settings()
+    
     @State private var email: String = ""
     @State private var password: String = ""
     @State private var showWalletView: Bool = false
@@ -29,7 +31,7 @@ struct LoginView: View {
                     .frame(height: 80)
                 
                 VStack(alignment: .center) {
-                    Image("nkoorty")
+                    Image("ghoshare")
                         .resizable()
                         .scaledToFit()
                         .frame(height: 140)
@@ -40,7 +42,7 @@ struct LoginView: View {
                     .frame(height: 20)
                 
                 /// Title
-                Text("RippleNipple")
+                Text("GhoShare")
                     .font(.system(size: 22, weight: .bold))
                 
                 Spacer()
@@ -103,7 +105,7 @@ struct LoginView: View {
                     showWalletView.toggle()
                 } label: {
                     HStack(spacing: 12) {
-                        Text("Create RippleNipple Wallet")
+                        Text("Create GhoShare Wallet")
                             .font(.system(size: 18, weight: .semibold))
                             .foregroundStyle(.white)
                     }
@@ -127,6 +129,8 @@ struct LoginView: View {
                     )
                     .padding(.top, 20)
                 }
+                
+                Spacer()
                 
                 Text("By continuing, you agree to our User Agreement and Privacy Policy.")
                     .font(.caption)
@@ -162,6 +166,7 @@ struct LoginView: View {
                 // authentication has now completed
                 if success {
                     UserDefaults.standard.set(true, forKey: "signin")
+                    settings.createdWallet = true
                 } else {
                     // there was a problem
                 }
@@ -174,6 +179,7 @@ struct LoginView: View {
     func connectSDK() async {
         let result = await metaMaskSDK.connect()
         UserDefaults.standard.set(true, forKey: "signin")
+        settings.connectedMetaMask = true
         
         switch result {
         case let .failure(error):

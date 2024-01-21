@@ -31,7 +31,7 @@ struct GroupOverview: View {
                                 .font(.system(size: 18, weight: .semibold))
                                 .padding(.top, 20)
                                 .padding(.bottom, 4)
-                            Text("254.31")
+                            Text("47.50")
                                 .font(.system(size: 46, weight: .bold))
                             Spacer()
                             Text("GHO ($US)")
@@ -102,7 +102,7 @@ struct GroupOverview: View {
                         }
                     }
                     HStack {
-                        Text("Pay 320 GHO ")
+                        Text("Pay 47.5 GHO ")
                         
                         Spacer()
                         
@@ -126,8 +126,8 @@ struct GroupOverview: View {
     }
 }
 
-#Preview {
-    GroupOverview(group: groups[0])
-        .preferredColorScheme(.dark)
-}
+//#Preview {
+//    GroupOverview(group: groups[0])
+//        .preferredColorScheme(.dark)
+//}
 

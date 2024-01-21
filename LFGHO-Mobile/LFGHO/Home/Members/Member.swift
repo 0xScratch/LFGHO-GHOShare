@@ -14,6 +14,6 @@ struct Member: Identifiable, Hashable {
 }
 
 var members: [Member] = [
-    Member(name: "Artemiy", profileImage: "nkoorty"),
-    Member(name: "Jeevan", profileImage: "nkoorty")
+    Member(name: "Artemiy", profileImage: "icon"),
+    Member(name: "Jeevan", profileImage: "icon2")
 ]

@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    @ObservedObject var settings = Settings()
+    @StateObject private var viewModel = GroupViewModel()
+    @State private var addGroupView = false
+    
     var body: some View {
         NavigationView {
             List {
@@ -24,7 +29,7 @@ struct HomeView: View {
                                 .font(.system(size: 18, weight: .semibold))
                                 .padding(.top, 20)
                                 .padding(.bottom, 4)
-                            Text("254.31")
+                            Text(settings.connectedMetaMask ? "47.50" : "0.00")
                                 .font(.system(size: 46, weight: .bold))
                             Spacer()
                             Text("GHO ($US)")
@@ -42,9 +47,17 @@ struct HomeView: View {
                 .cornerRadius(20)
                 
                 Section {
-                    ForEach(groups, id:\.id) { group in
-                        NavigationLink(destination: GroupOverview(group: group)) {
-                            GroupView(group: group)
+                    if settings.connectedMetaMask {
+                        ForEach(viewModel.groups1, id:\.id) { group in
+                            NavigationLink(destination: GroupOverview(group: group)) {
+                                GroupView(group: group)
+                            }
+                        }
+                    } else {
+                        ForEach(viewModel.groups, id:\.id) { group in
+                            NavigationLink(destination: GroupOverview(group: group)) {
+                                GroupView(group: group)
+                            }
                         }
                     }
                 } header: {
@@ -64,11 +77,14 @@ struct HomeView: View {
             .toolbar {
                 ToolbarItemGroup(placement: .topBarTrailing) {
                     Button {
-                        
+                        addGroupView.toggle()
                     } label: {
                         Image(systemName: "plus")
                     }
                 }
+            }
+            .sheet(isPresented: $addGroupView) {
+                GroupAddingView(viewModel: viewModel)
             }
         }
     }

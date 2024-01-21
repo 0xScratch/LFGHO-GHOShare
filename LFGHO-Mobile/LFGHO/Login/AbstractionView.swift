@@ -31,14 +31,14 @@ struct AbstractionView: View {
             
             Spacer().frame(height: 10)
             
-            Text("You are creating a self-custodian wallet without a seed phrase. You are agreeing to our Terms of Service and Privacy Policy. Ensure you have understood these documents before proceeding.")
+            Text("You are creating an EIP-4337 wallet without a seed phrase. You are agreeing to our Terms of Service and Privacy Policy. Ensure you have understood these documents before proceeding.")
                 .font(.subheadline)
                 .foregroundColor(.secondary)
             
             Spacer()
             
             Button(action: onWalletCreation) {
-                Label("Create RippleNipple Wallet", systemImage: "wallet.pass")
+                Label("Create GhoShare Wallet", systemImage: "wallet.pass")
                     .font(.system(size: 18, weight: .semibold))
                     .foregroundColor(.white)
                     .frame(maxWidth: .infinity)

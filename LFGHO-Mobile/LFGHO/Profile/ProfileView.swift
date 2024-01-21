@@ -7,10 +7,20 @@
 
 import SwiftUI
 import Charts
+import metamask_ios_sdk
+import Combine
 
 struct ProfileView: View {
     
+    @ObservedObject var settings = Settings()
+    
     let catData = [PetData(type: "cat", population: 30)]
+    
+    @ObservedObject var metaMaskSDK = MetaMaskSDK.shared(appMetadata)
+    private static let appMetadata = AppMetadata(name: "Dub Dapp", url: "https://dubdapp.com")
+
+    @State private var errorMessage = ""
+    @State private var showError = false
     
     var body: some View {
         NavigationView {
@@ -61,19 +71,44 @@ struct ProfileView: View {
                 .listRowInsets(EdgeInsets())
                 
                 Section {
-                    HStack(spacing: 16) {
-                        Image("metamask")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 26, height: 26)
-                            .cornerRadius(6)
-                        
-                        Text("MetaMask")
-                        
-                        Spacer()
-                        
-                        Text("Connected")
-                            .foregroundStyle(.gray)
+                    NavigationLink {
+                    } label: {
+                        HStack {
+                            Image("onramper")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 26, height: 26)
+                                .cornerRadius(6)
+                            
+                            Text("Onramper")
+                                .foregroundStyle(.white)
+                            
+                            Spacer()
+                            
+                            Text("Add funds")
+                                .foregroundStyle(.gray)
+                        }
+                    }
+                    Button {
+                        Task {
+                            await connectSDK()
+                        }
+                    } label: {
+                        HStack(spacing: 16) {
+                            Image("metamask")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 26, height: 26)
+                                .cornerRadius(6)
+                            
+                            Text("MetaMask")
+                                .foregroundStyle(.white)
+                            
+                            Spacer()
+                            
+                            Text(settings.connectedMetaMask ? "Connected" : "Not Connected")
+                                .foregroundStyle(.gray)
+                        }
                     }
                     HStack(spacing: 16) {
                         Image("nkoorty")
@@ -86,7 +121,7 @@ struct ProfileView: View {
                         
                         Spacer()
                         
-                        Text("Connected")
+                        Text(settings.createdWallet ? "Connected" : "Not Connected")
                             .foregroundStyle(.gray)
                     }
                 } header: {
@@ -145,6 +180,19 @@ struct ProfileView: View {
             , alignment: .topTrailing)
         }
     }
+    
+    func connectSDK() async {
+        let result = await metaMaskSDK.connect()
+        settings.connectedMetaMask = true
+        
+        switch result {
+        case let .failure(error):
+            errorMessage = error.localizedDescription
+            showError = true
+        default:
+            break
+        }
+    }
 }
 
 #Preview {
@@ -178,7 +226,7 @@ struct ThinDonutChartView: View {
 
 struct ProfileImageView: View {
     var body: some View {
-        Image("nkoorty")
+        Image("icon")
             .resizable()
             .scaledToFit()
             .frame(width: 40, height: 40)

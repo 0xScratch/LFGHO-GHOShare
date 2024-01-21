@@ -32,14 +32,14 @@ struct GroupView: View {
                     .foregroundColor(group.open ? .gray : .white)
                     .font(.system(size: 14))
                 
-                Text("\(String(format: "%.0f", group.owedAmount)) US$")
+                Text("\(String(format: "%.2f", group.owedAmount)) US$")
                     .bold()
             }
         }
     }
 }
 
-#Preview {
-    GroupView(group: groups[1])
-        .preferredColorScheme(.dark)
-}
+//#Preview {
+//    GroupView(group: groups[1])
+//        .preferredColorScheme(.dark)
+//}

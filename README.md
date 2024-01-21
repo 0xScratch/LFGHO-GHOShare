@@ -7,8 +7,12 @@ Submission for LFGHO Hackahton
 - Aave V3 Ethereum Facilitator for minting of GHO on overcollateralized manner.
 - Onramper for adding crypto using payments
 - Pimlico paymaster and permissionless.js for smart contract deployment
-- Notification 
-- Credit Delegation Vault for Group Expense management
+- GHO facilitator activity shown using Ethereum Mainnet GraphQL subgraph endpoint
+- Friends Transactions history shown from the event logs of contracts, swaps and transactions using historical balance.
+- EIP 2612 Permit function to allow for signature based pre-approval of funds for expenses by the group leader.
+- Credit Delegation Vault for Group Expense Management
+- Custom payment protocol using Payment contracts, Chainlink CCIP for Cross-network transactions and 1inch fork for token swapping
+- Notification alert to sender and receiver for confirmation of funds. 
 
 # Home
 ### Expenses

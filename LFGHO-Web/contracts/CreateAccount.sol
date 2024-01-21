@@ -1,10 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity ^0.8.19;
 
-/* solhint-disable avoid-low-level-calls */
-/* solhint-disable no-inline-assembly */
-/* solhint-disable reason-string */
-
 import "@openzeppelin/contracts/utils/cryptography/ECDSA.sol";
 import "@openzeppelin/contracts/proxy/utils/Initializable.sol";
 import "@openzeppelin/contracts/proxy/utils/UUPSUpgradeable.sol";
@@ -15,17 +11,11 @@ import "./AccountManager.sol";
 
 contract CreateAccount is BaseAccount, TokenCallbackHandler, UUPSUpgradeable, Initializable, AccountManager {
     using ECDSA for bytes32;
-
     address public owner;
-
     IEntryPoint private immutable _entryPoint;
 
     event SimpleAccountInitialized(IEntryPoint indexed entryPoint, address indexed owner);
     event Invoked(address indexed target, uint256 value, bytes data);
-
-    /**
-     * @dev A batch of transactions executed by low-level call successfully.
-     */
     event BatchInvoked(address[] target, uint256 value, bytes[] data);
 
     modifier onlyOwner() {
@@ -37,8 +27,6 @@ contract CreateAccount is BaseAccount, TokenCallbackHandler, UUPSUpgradeable, In
     function entryPoint() public view virtual override returns (IEntryPoint) {
         return _entryPoint;
     }
-
-    // solhint-disable-next-line no-empty-blocks
     receive() external payable {}
 
     constructor(IEntryPoint anEntryPoint) {
@@ -47,13 +35,8 @@ contract CreateAccount is BaseAccount, TokenCallbackHandler, UUPSUpgradeable, In
     }
 
     function _onlyOwner() internal view {
-        //directly from EOA owner, or through the account itself (which gets redirected through execute())
         require(msg.sender == owner || msg.sender == address(this), "only owner");
     }
-
-    /**
-     * execute a transaction (called directly from owner, or by entryPoint)
-     */
     function execute(address dest, uint256 value, bytes calldata func) external {
         bool isSession = _requireFromEntryPointOrOwnerOrSessionOwner(value);
         _call(dest, value, func);
@@ -61,10 +44,6 @@ contract CreateAccount is BaseAccount, TokenCallbackHandler, UUPSUpgradeable, In
         emit Invoked(dest, value, func);
     }
 
-    /**
-     * execute a sequence of transactions
-     * @dev to reduce gas consumption for trivial case (no value), use a zero-length array to mean zero value
-     */
     function executeBatch(address[] calldata dest, uint256[] calldata value, bytes[] calldata func) external {
         uint256 totalAmountSpent = 0;
         if (value.length == 0) {
@@ -87,9 +66,6 @@ contract CreateAccount is BaseAccount, TokenCallbackHandler, UUPSUpgradeable, In
         emit BatchInvoked(dest, totalAmountSpent, func);
     }
 
-    /**
-     * execute a transaction (called directly from owner, or by entryPoint)
-     */
     function addSession(address sessionUser, uint256 startFrom, uint256 validUntil, uint256 totalAmount) external {
         _requireFromEntryPointOrOwner();
         _addSession(sessionUser, startFrom, validUntil, totalAmount);
@@ -100,11 +76,6 @@ contract CreateAccount is BaseAccount, TokenCallbackHandler, UUPSUpgradeable, In
         _removeSession(sessionUser);
     }
 
-    /**
-     * @dev The _entryPoint member is immutable, to reduce gas consumption.  To upgrade EntryPoint,
-     * a new implementation of SimpleAccount must be deployed with the new EntryPoint address, then upgrading
-     * the implementation by calling `upgradeTo()`
-     */
     function initialize(address anOwner) public virtual initializer {
         _initialize(anOwner);
     }
@@ -113,8 +84,6 @@ contract CreateAccount is BaseAccount, TokenCallbackHandler, UUPSUpgradeable, In
         owner = anOwner;
         emit SimpleAccountInitialized(_entryPoint, owner);
     }
-
-    // Require the function call went through EntryPoint or owner
     function _requireFromEntryPointOrOwner() internal view {
         require(msg.sender == address(entryPoint()) || msg.sender == owner, "account: not Owner or EntryPoint");
     }
@@ -131,7 +100,6 @@ contract CreateAccount is BaseAccount, TokenCallbackHandler, UUPSUpgradeable, In
         return true;
     }
 
-    /// implement template method of BaseAccounts
     function _validateSignature(UserOperation calldata userOp, bytes32 userOpHash)
         internal
         virtual
@@ -160,31 +128,4 @@ contract CreateAccount is BaseAccount, TokenCallbackHandler, UUPSUpgradeable, In
         }
     }
 
-    /**
-     * check current account deposit in the entryPoint
-     */
-    function getDeposit() public view returns (uint256) {
-        return entryPoint().balanceOf(address(this));
-    }
-
-    /**
-     * deposit more funds for this account in the entryPoint
-     */
-    function addDeposit() public payable {
-        entryPoint().depositTo{value: msg.value}(address(this));
-    }
-
-    /**
-     * withdraw value from the account's deposit
-     * @param withdrawAddress target to send to
-     * @param amount to withdraw
-     */
-    function withdrawDepositTo(address payable withdrawAddress, uint256 amount) public onlyOwner {
-        entryPoint().withdrawTo(withdrawAddress, amount);
-    }
-
-    function _authorizeUpgrade(address newImplementation) internal view override {
-        (newImplementation);
-        _onlyOwner();
-    }
 }

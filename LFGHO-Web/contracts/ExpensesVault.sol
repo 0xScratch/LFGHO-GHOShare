@@ -23,7 +23,7 @@ interface Aave {
             uint totalCollateralETH,
             uint totalBorrowsETH,
             uint availableBorrowsETH,
-            uint currentLiquidationThreshold,
+            uint currentLiquidationThreshold
         );
 }
 interface AaveToken {
@@ -128,7 +128,6 @@ contract AaveCollateralVault {
         return _activeReserves;
     }
     
-    // LP deposit, anyone can deposit/topup
     function activate(address reserve) external onlyOwner {
         if (_reserves[reserve] == false) {
             _reserves[reserve] = true;

@@ -5,7 +5,7 @@ Submission for LFGHO Hackahton
 - Secure and easy onboarding using Account Abstraction and EIP 4337 Smart Accounts
 - Turnkey to generate signer wallet for smart account secured by FaceID authentication
 - Aave V3 Ethereum Facilitator for minting of GHO on overcollateralized manner.
-- Onramper for adding crypto using payments
+- Onramper for adding crypto using fiat payments
 - Pimlico paymaster and permissionless.js for smart contract deployment
 - GHO facilitator activity shown using Ethereum Mainnet GraphQL subgraph endpoint
 - Friends Transactions history shown from the event logs of contracts, swaps and transactions using historical balance.

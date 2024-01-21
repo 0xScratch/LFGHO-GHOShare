@@ -1,13 +1,13 @@
 # GhoShare
 
 <p align="center">
-  <img src="ghoshareimg.png" alt="Ghoshare Image" width="50%" height="auto"/>
+  <img src="ghoshareimg.png" alt="Ghoshare Image" width="20%" height="auto"/>
 </p>
 
 An iOS app for easy expense splitting and settlement using credit delegation, cross-network transactions and token swapping. Secured by biometric authentication and EIP 4337 smart accounts.
 
 
-# 👻 Main Features:
+# 👻 Main Features
 - Secure and easy onboarding using Account Abstraction and EIP 4337 Smart Accounts
 - Turnkey to generate signer wallet for smart account secured by FaceID authentication
 - Aave V3 Ethereum Facilitator for minting of GHO on overcollateralized manner.
@@ -19,6 +19,18 @@ An iOS app for easy expense splitting and settlement using credit delegation, cr
 - Credit Delegation Vault for Group Expense Management
 - Custom payment protocol using Payment contracts, Chainlink CCIP for Cross-network transactions and 1inch fork for token swapping
 - Notification alert to sender and receiver for confirmation of funds. 
+
+# Images
+<img src=https://github.com/nkoorty/lfgho/assets/80065244/c1dac0a9-789f-47cb-9d24-b28b56a1cef0 width=12%>
+<img src=https://github.com/nkoorty/lfgho/assets/80065244/183f4099-1d29-47d4-a9ef-2d6baced3723 width=12%>
+<img src=https://github.com/nkoorty/lfgho/assets/80065244/8a210690-05a2-498a-8238-7d975762d0e7 width=12%>
+<img src=https://github.com/nkoorty/lfgho/assets/80065244/0a486b77-0571-4212-a8f4-26f06b90c2bb width=12%>
+<img src=https://github.com/nkoorty/lfgho/assets/80065244/b64b5472-1e6b-4612-94bb-ddcdd9bf0996 width=12%>
+<img src=https://github.com/nkoorty/lfgho/assets/80065244/4cae5575-5be2-46a7-9a5f-846665297621 width=12%>
+<img src=https://github.com/nkoorty/lfgho/assets/80065244/56d43240-7a83-4fef-a4f7-161d19b0e59f width=12%>
+<img src=https://github.com/nkoorty/lfgho/assets/80065244/61c29197-1a2d-40a2-8ca4-ea39cf97e6d0 width=12%>
+
+
 
 # Home
 ### Expenses

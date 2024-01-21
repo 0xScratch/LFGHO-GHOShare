@@ -21,7 +21,7 @@ An iOS app for easy expense splitting and settlement using credit delegation, cr
 - Notification alert to sender and receiver for confirmation of funds. 
 
 # Images
-<img src=https://github.com/nkoorty/lfgho/assets/80065244/c1dac0a9-789f-47cb-9d24-b28b56a1cef0 width=12%>
+<img src=https://github.com/nkoorty/lfgho/assets/80065244/a3b22562-43d1-483f-ac95-c510334f8af8 width=12%>
 <img src=https://github.com/nkoorty/lfgho/assets/80065244/183f4099-1d29-47d4-a9ef-2d6baced3723 width=12%>
 <img src=https://github.com/nkoorty/lfgho/assets/80065244/8a210690-05a2-498a-8238-7d975762d0e7 width=12%>
 <img src=https://github.com/nkoorty/lfgho/assets/80065244/0a486b77-0571-4212-a8f4-26f06b90c2bb width=12%>

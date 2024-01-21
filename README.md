@@ -52,6 +52,9 @@ Finally, the app's activity tab provides a history of your friends' transactions
 <img src=https://github.com/nkoorty/lfgho/assets/80065244/61c29197-1a2d-40a2-8ca4-ea39cf97e6d0 width=12%>
 
 
+<p align="center">
+  <img src="PaymentProtocol.png" alt="Payment Image" width="20%" height="auto"/>
+</p>
 
 
 

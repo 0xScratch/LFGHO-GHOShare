@@ -33,7 +33,17 @@ GhoShare onboards the market of iOS users into the Aave ecosystem and incentivis
 <img src=https://github.com/nkoorty/lfgho/assets/80065244/61c29197-1a2d-40a2-8ca4-ea39cf97e6d0 width=12%>
 
 # Workflow
+When you download the app, you'll first be prompted to sign up or log in. You have two options for logging in: using a Metamask account or creating a new wallet through GhoShare's account abstraction and EIP 4337 smart accounts. Your wallet is secured with biometric authentication, using Apple's FaceID.
 
+Once logged in, you can fund your account in two ways: either by using Unlimit to add funds or by using your existing ETH as collateral to mint GHO through the Aave facilitator. You can also add friends by scanning their account-linked QR code.
+
+The app allows you to create expense groups with your friends. As a group leader, you can choose to fund expenses either with your own liquidity or through a credit delegation settlement. If you opt for the latter, you'll deposit assets (like GHO) into the protocol and delegate your credit line to group members, splitting the expense. You can set a repayment deadline and specify the token for repayment. Each group acts as a credit delegation vault, and we utilize the EIP 2612 Permit function for pre-approving funds through signature-based authorization.
+
+Group members have the flexibility to settle expenses using their own liquidity or by borrowing GHO. Moreover, you have the option to pay with any token and convert it to the group leader's preferred token. This enables combination transactions where you can use ETH as collateral, borrow GHO, and then convert and transfer the borrowed GHO back into ETH. This way, you can maintain full exposure to ETH while using GHO for payments.
+
+For transaction processing, we bundle each payment in a custom protocol that leverages Chainlink's Cross-Chain Interoperability Protocol for cross-network transactions and a 1inch fork for token swapping. All transactions are securely signed with biometric authentication, and both the sender and receiver are notified upon completion.
+
+Finally, the app's activity tab provides a history of your friends' transactions. This includes data from event logs of contracts, swaps, and transactions, as well as Aave facilitator activity, all accessible through the GraphQL subgraph endpoint.
 
 
 

@@ -26,6 +26,10 @@
 		DAA3ECA62B5D330000438CC9 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA3ECA52B5D330000438CC9 /* Settings.swift */; };
 		DAA3ECA82B5D35A100438CC9 /* GroupAddingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA3ECA72B5D35A100438CC9 /* GroupAddingView.swift */; };
 		DAA3ECAB2B5D36BA00438CC9 /* GroupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA3ECAA2B5D36BA00438CC9 /* GroupViewModel.swift */; };
+		DAA3ECAD2B5D53C800438CC9 /* PayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA3ECAC2B5D53C800438CC9 /* PayView.swift */; };
+		DAA3ECAF2B5D53D000438CC9 /* BorrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA3ECAE2B5D53D000438CC9 /* BorrowView.swift */; };
+		DAA3ECB12B5D610600438CC9 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA3ECB02B5D610600438CC9 /* Activity.swift */; };
+		DAA3ECB32B5D61D000438CC9 /* ActivityPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA3ECB22B5D61D000438CC9 /* ActivityPreview.swift */; };
 		DAC103B52B5AC6FC00CE4674 /* LFGHOApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC103B42B5AC6FC00CE4674 /* LFGHOApp.swift */; };
 		DAC103B92B5AC6FD00CE4674 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAC103B82B5AC6FD00CE4674 /* Assets.xcassets */; };
 		DAC103BC2B5AC6FD00CE4674 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAC103BB2B5AC6FD00CE4674 /* Preview Assets.xcassets */; };
@@ -50,6 +54,10 @@
 		DAA3ECA52B5D330000438CC9 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		DAA3ECA72B5D35A100438CC9 /* GroupAddingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupAddingView.swift; sourceTree = "<group>"; };
 		DAA3ECAA2B5D36BA00438CC9 /* GroupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewModel.swift; sourceTree = "<group>"; };
+		DAA3ECAC2B5D53C800438CC9 /* PayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayView.swift; sourceTree = "<group>"; };
+		DAA3ECAE2B5D53D000438CC9 /* BorrowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorrowView.swift; sourceTree = "<group>"; };
+		DAA3ECB02B5D610600438CC9 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		DAA3ECB22B5D61D000438CC9 /* ActivityPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityPreview.swift; sourceTree = "<group>"; };
 		DAC103B12B5AC6FC00CE4674 /* GhoShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GhoShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAC103B42B5AC6FC00CE4674 /* LFGHOApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LFGHOApp.swift; sourceTree = "<group>"; };
 		DAC103B82B5AC6FD00CE4674 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -110,6 +118,8 @@
 			isa = PBXGroup;
 			children = (
 				DA37FA732B5C142100AB6541 /* ActivityView.swift */,
+				DAA3ECB02B5D610600438CC9 /* Activity.swift */,
+				DAA3ECB22B5D61D000438CC9 /* ActivityPreview.swift */,
 			);
 			path = Activity;
 			sourceTree = "<group>";
@@ -140,6 +150,8 @@
 				DA37FA7C2B5C295D00AB6541 /* GroupView.swift */,
 				DA37FA752B5C1A3600AB6541 /* Group.swift */,
 				DAA3ECAA2B5D36BA00438CC9 /* GroupViewModel.swift */,
+				DAA3ECAC2B5D53C800438CC9 /* PayView.swift */,
+				DAA3ECAE2B5D53D000438CC9 /* BorrowView.swift */,
 			);
 			path = Group;
 			sourceTree = "<group>";
@@ -273,11 +285,15 @@
 				DAA3ECAB2B5D36BA00438CC9 /* GroupViewModel.swift in Sources */,
 				DAC103B52B5AC6FC00CE4674 /* LFGHOApp.swift in Sources */,
 				DAA3ECA82B5D35A100438CC9 /* GroupAddingView.swift in Sources */,
+				DAA3ECAF2B5D53D000438CC9 /* BorrowView.swift in Sources */,
+				DAA3ECAD2B5D53C800438CC9 /* PayView.swift in Sources */,
 				DA0705A22B5C810E00822FBA /* LoginView.swift in Sources */,
+				DAA3ECB32B5D61D000438CC9 /* ActivityPreview.swift in Sources */,
 				DA37FA822B5C339F00AB6541 /* MemberView.swift in Sources */,
 				DA37FA742B5C142100AB6541 /* ActivityView.swift in Sources */,
 				DA37FA842B5C33AB00AB6541 /* Member.swift in Sources */,
 				DA37FA892B5C359500AB6541 /* Expense.swift in Sources */,
+				DAA3ECB12B5D610600438CC9 /* Activity.swift in Sources */,
 				DA37FA872B5C358F00AB6541 /* ExpenseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -15,7 +15,7 @@ class GroupViewModel: ObservableObject {
     
     init() {
         groups = [
-
+            Group(name: "Boston Trip", imageUrl: "group_img", memberCount: 2.0, owedAmount: 47.50, open: false)
         ]
         
         groups1 = [

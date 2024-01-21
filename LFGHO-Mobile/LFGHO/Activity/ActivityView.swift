@@ -11,8 +11,10 @@ struct ActivityView: View {
     var body: some View {
         NavigationView {
             List {
-                Section {
-                    Text("Meow")
+                Section(header: Text("Recent Acitivity")) {
+                    ForEach(activities, id: \.id) { activity in
+                            ActivityPreview(activity: activity)
+                    }
                 }
             }
             .navigationTitle("Activity")

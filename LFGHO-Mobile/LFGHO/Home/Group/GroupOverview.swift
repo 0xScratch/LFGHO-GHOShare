@@ -13,6 +13,8 @@ struct GroupOverview: View {
     let tokens = ["AAV", "USDC", "GHO"]
     
     @State private var selectedToken: String = "GHO"
+    @State private var presentBorrow = false
+    @State private var presentPay = false
     
     var body: some View {
         VStack {
@@ -95,7 +97,7 @@ struct GroupOverview: View {
                         Spacer()
                         
                         Button {
-                            
+                            presentBorrow.toggle()
                         } label: {
                             Text("Borrow")
                                 .foregroundStyle(.blue)
@@ -107,7 +109,7 @@ struct GroupOverview: View {
                         Spacer()
                         
                         Button {
-                            
+                            presentPay.toggle()
                         } label: {
                             Text("Pay")
                                 .foregroundStyle(.blue)
@@ -122,12 +124,15 @@ struct GroupOverview: View {
                 
             }
             .navigationTitle(group.name)
+            .sheet(isPresented: $presentBorrow) {
+                BorrowView()
+            }
+            .sheet(isPresented: $presentPay) {
+                PayView()
+                    .presentationDetents([.fraction(0.5)])
+            }
         }
     }
 }
 
-//#Preview {
-//    GroupOverview(group: groups[0])
-//        .preferredColorScheme(.dark)
-//}
 

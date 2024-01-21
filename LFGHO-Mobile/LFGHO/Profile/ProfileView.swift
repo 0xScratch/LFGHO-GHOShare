@@ -74,13 +74,13 @@ struct ProfileView: View {
                     NavigationLink {
                     } label: {
                         HStack {
-                            Image("onramper")
+                            Image("unlimit")
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 26, height: 26)
                                 .cornerRadius(6)
                             
-                            Text("Onramper")
+                            Text("Unlimit")
                                 .foregroundStyle(.white)
                             
                             Spacer()

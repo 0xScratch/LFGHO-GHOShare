@@ -11,7 +11,7 @@ struct AaveDashboard: View {
     
     let catData = [PetData(type: "cat", population: 30)]
     
-    @State private var borrowAmount: Double = 10000
+    @State private var borrowAmount: Double = 4500
     @State private var stakedAmount: Double = 35
     
     var body: some View {
@@ -34,7 +34,7 @@ struct AaveDashboard: View {
                                     Text("Borrow APY")
                                         .font(.caption)
                                     
-                                    Text("3.49%")
+                                    Text("\(String(format: "%.2f", borrowAmount/1000 * 0.8))%")
                                         .font(.system(size: 22, weight: .bold))
                                 }
                             )
@@ -121,7 +121,7 @@ struct AaveDashboard: View {
                 }
             }
 
-            Section(header: Text("Staked AAVE amount")) {
+            Section(header: Text("Staked ETH amount")) {
                 HStack {
                     Slider(
                         value: $stakedAmount,
@@ -129,7 +129,7 @@ struct AaveDashboard: View {
                         step: 1
                     )
                     .accentColor(.blue)
-                    Text("\(Int(stakedAmount)) AAVE")
+                    Text("\(Int(stakedAmount)) ETH")
                         .foregroundColor(.gray)
                 }
             }
@@ -156,7 +156,7 @@ struct AaveDashboard: View {
                     
                     Spacer()
                     
-                    Text("100 GHO = 1 AAVE")
+                    Text("2475 GHO = 1 ETH")
                         .foregroundStyle(.gray)
                 }
                 HStack {
@@ -176,11 +176,11 @@ struct AaveDashboard: View {
                         .foregroundStyle(.gray)
                 }
                 HStack {
-                    Text("Minimum AAVE stake")
+                    Text("Minimum ETH stake")
                     
                     Spacer()
                     
-                    Text("0.001 AAVE")
+                    Text("0.00001 ETH")
                         .foregroundStyle(.gray)
                 }
                 HStack {

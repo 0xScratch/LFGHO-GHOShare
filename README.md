@@ -2,6 +2,12 @@
 Submission for LFGHO Hackahton
 
 # Main Features:
+- Secure and easy onboarding using Account Abstraction and EIP 4337 Smart Accounts
+- Turnkey to generate signer wallet for smart account secured by FaceID authentication
+- Aave V3 Ethereum Facilitator for minting of GHO on overcollateralized manner.
+- Onramper for adding crypto using payments
+- Pimlico paymaster and permissionless.js for smart contract deployment
+- Notification 
 - Credit Delegation Vault for Group Expense management
 
 # Home

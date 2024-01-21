@@ -61,7 +61,7 @@ struct ProfileView: View {
                 .listRowInsets(EdgeInsets())
                 
                 Section {
-                    HStack {
+                    HStack(spacing: 16) {
                         Image("metamask")
                             .resizable()
                             .scaledToFit()
@@ -75,7 +75,7 @@ struct ProfileView: View {
                         Text("Connected")
                             .foregroundStyle(.gray)
                     }
-                    HStack {
+                    HStack(spacing: 16) {
                         Image("nkoorty")
                             .resizable()
                             .scaledToFit()
@@ -124,6 +124,17 @@ struct ProfileView: View {
                     }
                 } header: {
                     Text("Settings")
+                }
+                
+                Section {
+                    Button {
+                        UserDefaults.standard.set(false, forKey: "signin")
+                    } label: {
+                        Text("Log out")
+                            .foregroundStyle(.red)
+                    }
+                } header: {
+                    Text("Disconnect")
                 }
             }
             .navigationTitle("Home")

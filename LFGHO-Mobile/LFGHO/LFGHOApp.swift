@@ -9,10 +9,18 @@ import SwiftUI
 
 @main
 struct LFGHOApp: App {
+    
+    @AppStorage("signin") var isSignedIn = false
+    
     var body: some Scene {
         WindowGroup {
-            TabBarView()
-                .preferredColorScheme(.dark)
+            if !isSignedIn {
+                LoginView()
+                    .preferredColorScheme(.dark)
+            } else {
+                TabBarView()
+                    .preferredColorScheme(.dark)
+            }
         }
     }
 }

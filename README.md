@@ -33,5 +33,5 @@ To manage the risk of credit delegation, particularly for the depositor you can 
 # Profile
 
 # 👥 The GhoShare team
-- [Jeevan Jutla](https://www.linkedin.com/in/jeevan-jutla/)
-- [Artemiy Malyshau](https://www.linkedin.com/in/artemiy-malyshau/)
+- [Jeevan Jutla](https://www.linkedin.com/in/jeevan-jutla/) - Backend Developer, prev Binance Security Engineer
+- [Artemiy Malyshau](https://www.linkedin.com/in/artemiy-malyshau/) - Frontend Developer, Imperial CS and Engineering MSc 

@@ -12,10 +12,9 @@
     "tsconfig": "*",
     "turbo": "latest"
   },
-  "name": "eth-global-istanbul",
-  "packageManager": "yarn@1.22.19",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ]
+  "name": "ccip-starter-kit-foundry",
+  "devDependencies": {
+    "@chainlink/contracts": "^0.6.1",
+    "@chainlink/contracts-ccip": "^0.7.3"
+  }
 }

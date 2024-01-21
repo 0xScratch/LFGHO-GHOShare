@@ -3,7 +3,7 @@
 <p align="center">
   <img src="ghoshareimg.png" alt="Ghoshare Image" width="50%" height="auto"/>
 </p>
-
+![testt](ghoshareimg.png)
 An iOS app for easy expense splitting and settlement using credit delegation, cross-network transactions and token swapping. Secured by biometric authentication and EIP 4337 smart accounts.
 
 

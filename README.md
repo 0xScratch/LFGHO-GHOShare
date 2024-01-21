@@ -35,7 +35,7 @@ GhoShare onboards the market of iOS users into the Aave ecosystem and incentivis
 # Workflow
 When you download the app, you'll first be prompted to sign up or log in. You have two options for logging in: using a Metamask account or creating a new wallet through GhoShare's account abstraction and EIP 4337 smart accounts. Your wallet is secured with biometric authentication, using Apple's FaceID.
 
-Once logged in, you can fund your account in two ways: either by using Unlimit to add funds or by using your existing ETH as collateral to mint GHO through the Aave facilitator. You can also add friends by scanning their account-linked QR code.
+Once logged in, you can fund your account in two ways: either by using Unlimit to add funds or by using your existing ETH as collateral to mint GHO through the Aave Ethereum facilitator. You can also add friends by scanning their account-linked QR code.
 
 The app allows you to create expense groups with your friends. As a group leader, you can choose to fund expenses either with your own liquidity or through a credit delegation settlement. If you opt for the latter, you'll deposit assets (like GHO) into the protocol and delegate your credit line to group members, splitting the expense. You can set a repayment deadline and specify the token for repayment. Each group acts as a credit delegation vault, and we utilize the EIP 2612 Permit function for pre-approving funds through signature-based authorization.
 

@@ -1,5 +1,5 @@
 # GhoShare
-An iOS app for easy expense splitting and settlement using credit delegation, cross-network transactions and token swapping. Secured by biometric authentication and EIP 4337 smart contracts.
+An iOS app for easy expense splitting and settlement using credit delegation, cross-network transactions and token swapping. Secured by biometric authentication and EIP 4337 smart accounts.
 
 # Main Features:
 - Secure and easy onboarding using Account Abstraction and EIP 4337 Smart Accounts

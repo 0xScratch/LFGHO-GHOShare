@@ -6,6 +6,8 @@
 
 GhoShare is an iOS app created to address the spesific shortcoming in current expense splitting apps by enabling decentralised direct in-app settlements of payments using credit delegation, token swapping and cross-network transactions. Secured by biometric authentication and EIP 4337 smart accounts.
 
+GhoShare onboards the market of iOS users into the Aave ecosystem and incentivises users to mint GHO, expanding the utility and ways people can spend GHO.
+
 
 # Main Features
 - Custom payment protocol using payment contracts, Chainlink CCIP for cross-network transactions and 1inch fork for token swapping.

@@ -53,7 +53,7 @@ Finally, the app's activity tab provides a history of your friends' transactions
 
 
 <p align="center">
-  <img src="PaymentProtocol.png" alt="Payment Image" width="20%" height="auto"/>
+  <img src="PaymentProtocol.png" alt="Payment Image" height="auto"/>
 </p>
 
 

@@ -19,7 +19,7 @@ GhoShare onboards the market of iOS users into the Aave ecosystem and incentivis
 - Unlimit iOS SDK for onramping crypto using fiat payments.
 - Pimlico paymaster and permissionless.js for smart contract deployment.
 - GHO facilitator activity shown using Ethereum Mainnet GraphQL subgraph endpoint.
-- Friends transactions history shown from the event logs of contracts, swaps and transactions using historical balance.
+- Transactions history shown from the event logs of contracts, swaps and transactions using historical balance.
 - Notification alert to sender and receiver for confirmation of funds. 
 
 # Images

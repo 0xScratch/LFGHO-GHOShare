@@ -1,7 +1,7 @@
 # GhoShare
 An iOS app for easy expense splitting and settlement using credit delegation, cross-network transactions and token swapping. Secured by biometric authentication and EIP 4337 smart accounts.
 
-# Main Features:
+# 👻 Main Features:
 - Secure and easy onboarding using Account Abstraction and EIP 4337 Smart Accounts
 - Turnkey to generate signer wallet for smart account secured by FaceID authentication
 - Aave V3 Ethereum Facilitator for minting of GHO on overcollateralized manner.

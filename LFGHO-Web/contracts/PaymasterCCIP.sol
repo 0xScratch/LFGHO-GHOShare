@@ -6,7 +6,7 @@ import {IPool} from "@aave/core-v3/contracts/interfaces/IPool.sol";
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract Paymaster2 is IPaymaster2, Ownable {
+contract PaymasterCCIP is IPaymasterCCIP, Ownable {
     IPoolAddressesProvider immutable poolProvider;
     IVariableDebtToken immutable GhoVariableDebtToken;
     uint64 immutable CHAIN_SELECTOR = 16015286601757825753;

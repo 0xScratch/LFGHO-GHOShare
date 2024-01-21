@@ -4,7 +4,7 @@
   <img src="ghoshareimg.png" alt="Ghoshare Image" width="20%" height="auto"/>
 </p>
 
-An iOS app for easy expense splitting and settlement using credit delegation, cross-network transactions and token swapping. Secured by biometric authentication and EIP 4337 smart accounts.
+An iOS app for easy expense splitting and settlement using credit delegation, cross-network transactions and token swapping. Secured by biometric authentication and EIP 4337 smart accounts. As opposed to alternative payment splitting apps, GhoShare ensures that all payments are actually settled and not symbolic numbers.
 
 
 # 👻 Main Features

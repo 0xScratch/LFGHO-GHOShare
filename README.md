@@ -1,5 +1,11 @@
 # GhoShare
+https://ethglobal.com/showcase/ghoshare-nggb3
 
+Winner Of:
+- Aave - Payments 1st place
+- Chainlink - Best Projects Built with CCIP and GHO
+
+- 
 <p align="center">
   <img src="ghoshareimg.png" alt="Ghoshare Image" width="20%" height="auto"/>
 </p>

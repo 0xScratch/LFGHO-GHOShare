@@ -1,6 +1,8 @@
 # GhoShare
 
-Winner Of: https://ethglobal.com/showcase/ghoshare-nggb3
+ETH Global Link: https://ethglobal.com/showcase/ghoshare-nggb3
+
+Winner Of: 
 - Aave - Payments 1st place
 - Chainlink - Best Projects Built with CCIP and GHO
 

@@ -83,19 +83,15 @@ Please click on the thumbnail below to view our demo.
 - Customizable Privacy for what is displayed in the activity tab.
 
 # Images
-<img src=https://github.com/nkoorty/lfgho/assets/80065244/183f4099-1d29-47d4-a9ef-2d6baced3723 width=20%>
-<img src=https://github.com/nkoorty/lfgho/assets/80065244/8a210690-05a2-498a-8238-7d975762d0e7 width=20%>
-<img src=https://github.com/nkoorty/lfgho/assets/80065244/b64b5472-1e6b-4612-94bb-ddcdd9bf0996 width=20%>
-<img src=https://github.com/nkoorty/lfgho/assets/80065244/4cae5575-5be2-46a7-9a5f-846665297621 width=20%>
-<img src=https://github.com/nkoorty/lfgho/assets/80065244/61c29197-1a2d-40a2-8ca4-ea39cf97e6d0 width=20%>
+## Screenshots
+<img src=https://github.com/nkoorty/lfgho/assets/80065244/183f4099-1d29-47d4-a9ef-2d6baced3723 width=19%>
+<img src=https://github.com/nkoorty/lfgho/assets/80065244/8a210690-05a2-498a-8238-7d975762d0e7 width=19%>
+<img src=https://github.com/nkoorty/lfgho/assets/80065244/b64b5472-1e6b-4612-94bb-ddcdd9bf0996 width=19%>
+<img src=https://github.com/nkoorty/lfgho/assets/80065244/4cae5575-5be2-46a7-9a5f-846665297621 width=19%>
+<img src=https://github.com/nkoorty/lfgho/assets/80065244/61c29197-1a2d-40a2-8ca4-ea39cf97e6d0 width=19%>
 
-
-
-
-<p align="center">
-  <img src="PaymentProtocol.png" alt="Payment Image" height="auto"/>
-</p>
-
+## Payment Protocol Diagram
+![GhoShare Payment Protocol](https://github.com/nkoorty/ghoshare/assets/80065244/aecfd5d8-c096-44ea-b7f5-e33bd8191ab1)
 
 
 # The GhoShare team

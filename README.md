@@ -29,33 +29,65 @@ GhoShare onboards the market of iOS users into the Aave ecosystem and incentivis
 - Notification alert to sender and receiver for confirmation of funds.
 
 # Video
-
+Please click on the thumbnail below to view our demo.
 [![Video Thumbnail](https://img.youtube.com/vi/peU-QWqdiw8/maxresdefault.jpg)](https://youtu.be/peU-QWqdiw8)
 
 
 # Workflow
-When you download the app, you'll first be prompted to sign up or log in. You have two options for logging in: using a Metamask account or creating a new wallet through GhoShare's account abstraction and EIP 4337 smart accounts. Your wallet is secured with biometric authentication, using Apple's FaceID.
 
-Once logged in, you can fund your account in two ways: either by using Unlimit to add funds or by using your existing ETH as collateral to mint GHO through the Aave Ethereum facilitator. You can also add friends by scanning their account-linked QR code.
+### Sign Up:
+- Secure & easy onboarding using account abstraction and EIP 4337 smart accounts.
+- Wallet created through faceID using turnkey to generate a signer wallet for the smart account.
+- Deployed using Pimlico paymaster using permissionless.js to provide a gasless UX.
 
-The app allows you to create expense groups with your friends. As a group leader, you can choose to fund expenses either with your own liquidity or through a credit delegation settlement. If you opt for the latter, you'll deposit assets (like GHO) into the protocol and delegate your credit line to group members, splitting the expense. You can set a repayment deadline and specify the token for repayment. Each group acts as a credit delegation vault, and we utilize the EIP 2612 Permit function for pre-approving funds through signature-based authorization.
+### Sign In:
+- Sign in using Metamask SDK
 
-Group members have the flexibility to settle expenses using their own liquidity or by borrowing GHO. Moreover, you have the option to pay with any token and convert it to the group leader's preferred token. This enables combination transactions where you can use ETH as collateral, borrow GHO, and then convert and transfer the borrowed GHO back into ETH. This way, you can maintain full exposure to ETH while using GHO for payments.
+### Fund Account:
+- Unlimit iOS SDK for on-ramping crypto using fiat.
+- Aave V3 ETH Facilitator for minting GHO tokens in an overcollateralized manner.
+    - Use Ui Pool Data Provider V3 contracts (`getReservesData()`) and the Lending Pool contract to deposit collateral.
+    - `borrow()` called to mint GHO.
 
-For transaction processing, we bundle each payment in a custom protocol that leverages Chainlink's Cross-Chain Interoperability Protocol for cross-network transactions and a 1inch fork for token swapping. All transactions are securely signed with biometric authentication, and both the sender and receiver are notified upon completion.
+## Expense Splitting Groups
 
-Finally, the app's activity tab provides a history of your friends' transactions. This includes data from event logs of contracts, swaps, and transactions, as well as Aave facilitator activity, all accessible through the GraphQL subgraph endpoint.
+### Credit Delegation Vault for Group Expense Management:
+- Depositors provide liquidity for the expense to be paid by depositing assets like GHO into the Aave protocol.
+- They can then delegate their credit lines to the vault contract which acts on behalf of the group for expense management.
+- The vault acts as the borrower to borrow funds against the deposited collateral up to the delegated limit.
+- `ExpensesVault.sol` to act as a credit delegation vault, functions to handle deposits, delegate credit, track outstanding debts, and manage repayments.
+- Check if the user is authorized and their request exceeds the credit limit.
+- Handle credit from multiple depositors.
+- Contract manages repayments to make sure they are made on time to avoid liquidation.
+- Users don't have to lock up capital; they can leverage their assets by borrowing against them.
+- When a user needs to delegate GHO to another user for an expense, they sign an EIP 2612 permit message with the details of the delegation. This can be submitted to the token contract to obtain the allowed amount without requiring the delegator to perform a transaction, making it easier/smooth and saving gas fees.
+- Workflow system using account abstraction??
+- Cost Splitting Templates for recurring expenses
 
+## Payments
+
+### Custom payment protocol:
+- The protocol allows for a combination of transactions where the user can supply ETH as collateral, borrow GHO, and switch and transfer the borrowed GHO into ETH, using 1inch.
+- Here the user maintains 100% of their exposure to ETH while still utilizing the GHO token for payments.
+- Chainlink CCIP for cross-network transactions
+- 1inch fork for token swapping,
+
+## Activity/Social:
+
+### Displaying activity of friends transactions, swaps, and deposits:
+- GHO facilitator activity shown using Ethereum Mainnet GraphQL subgraph endpoint - which indexes events and can be used to query data about GHO facilitator and interactions with the Aave v3 market.
+- Contract State Data: Query balance of a friend's account, like GHO data functions such as `totalSupply()`, `balanceOf()`, `allowance()`.
+- Event Logs: Use filters for certain transactions or friends' accounts to emit logs for payments, swaps, or historical balance. Functions such as `Transfer()`, `Approval()`.
+- Historical information in the activity tab is useful for safety features, allowing users to see if they have transacted with a specific friend before.
+- An iOS Notification alert to sender and receiver for confirmation of funds is triggered through the event logs.
+- Customizable Privacy for what is displayed in the activity tab.
 
 # Images
-<img src=https://github.com/nkoorty/lfgho/assets/80065244/a3b22562-43d1-483f-ac95-c510334f8af8 width=12%>
-<img src=https://github.com/nkoorty/lfgho/assets/80065244/183f4099-1d29-47d4-a9ef-2d6baced3723 width=12%>
-<img src=https://github.com/nkoorty/lfgho/assets/80065244/8a210690-05a2-498a-8238-7d975762d0e7 width=12%>
-<img src=https://github.com/nkoorty/lfgho/assets/80065244/0a486b77-0571-4212-a8f4-26f06b90c2bb width=12%>
-<img src=https://github.com/nkoorty/lfgho/assets/80065244/b64b5472-1e6b-4612-94bb-ddcdd9bf0996 width=12%>
-<img src=https://github.com/nkoorty/lfgho/assets/80065244/4cae5575-5be2-46a7-9a5f-846665297621 width=12%>
-<img src=https://github.com/nkoorty/lfgho/assets/80065244/56d43240-7a83-4fef-a4f7-161d19b0e59f width=12%>
-<img src=https://github.com/nkoorty/lfgho/assets/80065244/61c29197-1a2d-40a2-8ca4-ea39cf97e6d0 width=12%>
+<img src=https://github.com/nkoorty/lfgho/assets/80065244/183f4099-1d29-47d4-a9ef-2d6baced3723 width=20%>
+<img src=https://github.com/nkoorty/lfgho/assets/80065244/8a210690-05a2-498a-8238-7d975762d0e7 width=20%>
+<img src=https://github.com/nkoorty/lfgho/assets/80065244/b64b5472-1e6b-4612-94bb-ddcdd9bf0996 width=20%>
+<img src=https://github.com/nkoorty/lfgho/assets/80065244/4cae5575-5be2-46a7-9a5f-846665297621 width=20%>
+<img src=https://github.com/nkoorty/lfgho/assets/80065244/61c29197-1a2d-40a2-8ca4-ea39cf97e6d0 width=20%>
 
 
 

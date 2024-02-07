@@ -47,7 +47,7 @@ Please click on the thumbnail below to view our demo.
 - Unlimit iOS SDK for on-ramping crypto using Fiat.
 - Aave V3 ETH Facilitator for minting GHO tokens in an overcollateralized manner.
     - Use UiPoolDataProviderV3 contracts (`getReservesData()`) and the Lending Pool contract to deposit collateral.
-    - `borrow()` called to mint GHO.
+    - The `borrow()` function is called to mint GHO.
 
 ## Expense Splitting Groups
 Depositors provide liquidity for the expense to be paid by depositing assets like GHO into the Aave protocol. They can then delegate their credit lines to the vault contract which acts on behalf of the group for expense management. The vault acts as the borrower to borrow funds against the deposited collateral up to the delegated limit.
@@ -63,7 +63,7 @@ Depositors provide liquidity for the expense to be paid by depositing assets lik
 - Users don't have to lock up capital; they can leverage their assets by borrowing against them.
 - When a user needs to delegate GHO to another user for an expense, they sign an EIP 2612 permit message with the details of the delegation. This can be submitted to the token contract to obtain the allowed amount without requiring the delegator to perform a transaction, making it easier/smooth and saving gas fees.
 - Incorporate a workflow system using account abstraction (AA)
-- Cost Splitting Templates for recurring expenses
+- Cost Splitting Templates for recurring expenses.
 
 ## Payments
 The protocol allows for a combination of transactions where the user can supply ETH as collateral, borrow GHO and switch and transfer the borrowed GHO into ETH, using 1inch. Here the user maintains 100% of their exposure to ETH while still utilising the GHO token for payments.
@@ -71,8 +71,8 @@ The protocol allows for a combination of transactions where the user can supply 
 ### Custom payment protocol:
 - The protocol allows for a combination of transactions where the user can supply ETH as collateral, borrow GHO, and switch and transfer the borrowed GHO into ETH, using 1inch.
 - Here the user maintains 100% of their exposure to ETH while still utilizing the GHO token for payments.
-- Chainlink CCIP for cross-network transactions
-- 1inch fork is used for token swapping,
+- Chainlink CCIP for cross-network transactions.
+- 1inch fork is used for token swapping.
 
 ## Activity/Social:
 

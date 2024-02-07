@@ -37,23 +37,24 @@ Please click on the thumbnail below to view our demo.
 ## User Onboarding
 ### Sign Up:
 - Secure & easy onboarding using account abstraction and EIP 4337 smart accounts.
-- Wallet created through faceID using turnkey to generate a signer wallet for the smart account.
+- Wallet created via FaceID using a turnkey to generate a signer wallet for the smart account.
 - Deployed using Pimlico paymaster using permissionless.js to provide a gasless UX.
 
 ### Sign In:
 - Sign in using Metamask SDK
 
 ### Fund Account:
-- Unlimit iOS SDK for on-ramping crypto using fiat.
+- Unlimit iOS SDK for on-ramping crypto using Fiat.
 - Aave V3 ETH Facilitator for minting GHO tokens in an overcollateralized manner.
-    - Use Ui Pool Data Provider V3 contracts (`getReservesData()`) and the Lending Pool contract to deposit collateral.
+    - Use UiPoolDataProviderV3 contracts (`getReservesData()`) and the Lending Pool contract to deposit collateral.
     - `borrow()` called to mint GHO.
 
 ## Expense Splitting Groups
+Depositors provide liquidity for the expense to be paid by depositing assets like GHO into the Aave protocol. They can then delegate their credit lines to the vault contract which acts on behalf of the group for expense management. The vault acts as the borrower to borrow funds against the deposited collateral up to the delegated limit.
 
 ### Credit Delegation Vault for Group Expense Management:
-- Depositors provide liquidity for the expense to be paid by depositing assets like GHO into the Aave protocol.
-- They can then delegate their credit lines to the vault contract which acts on behalf of the group for expense management.
+- Depositors provide liquidity for the expense to be paid by depositing assets such as GHO into the Aave protocol.
+- They can delegate their credit lines to the vault contract which acts on behalf of the group for expense management.
 - The vault acts as the borrower to borrow funds against the deposited collateral up to the delegated limit.
 - `ExpensesVault.sol` to act as a credit delegation vault, functions to handle deposits, delegate credit, track outstanding debts, and manage repayments.
 - Check if the user is authorized and their request exceeds the credit limit.
@@ -61,25 +62,26 @@ Please click on the thumbnail below to view our demo.
 - Contract manages repayments to make sure they are made on time to avoid liquidation.
 - Users don't have to lock up capital; they can leverage their assets by borrowing against them.
 - When a user needs to delegate GHO to another user for an expense, they sign an EIP 2612 permit message with the details of the delegation. This can be submitted to the token contract to obtain the allowed amount without requiring the delegator to perform a transaction, making it easier/smooth and saving gas fees.
-- Workflow system using account abstraction??
+- Incorporate a workflow system using account abstraction (AA)
 - Cost Splitting Templates for recurring expenses
 
 ## Payments
+The protocol allows for a combination of transactions where the user can supply ETH as collateral, borrow GHO and switch and transfer the borrowed GHO into ETH, using 1inch. Here the user maintains 100% of their exposure to ETH while still utilising the GHO token for payments.
 
 ### Custom payment protocol:
 - The protocol allows for a combination of transactions where the user can supply ETH as collateral, borrow GHO, and switch and transfer the borrowed GHO into ETH, using 1inch.
 - Here the user maintains 100% of their exposure to ETH while still utilizing the GHO token for payments.
 - Chainlink CCIP for cross-network transactions
-- 1inch fork for token swapping,
+- 1inch fork is used for token swapping,
 
 ## Activity/Social:
 
 ### Displaying activity of friends transactions, swaps, and deposits:
 - GHO facilitator activity shown using Ethereum Mainnet GraphQL subgraph endpoint - which indexes events and can be used to query data about GHO facilitator and interactions with the Aave v3 market.
 - Contract State Data: Query balance of a friend's account, like GHO data functions such as `totalSupply()`, `balanceOf()`, `allowance()`.
-- Event Logs: Use filters for certain transactions or friends' accounts to emit logs for payments, swaps, or historical balance. Functions such as `Transfer()`, `Approval()`.
+- Event Logs: Use filters for certain transactions or friends' accounts to emit logs for payments, swaps, or historical balance using functions such as `Transfer()`, `Approval()`.
 - Historical information in the activity tab is useful for safety features, allowing users to see if they have transacted with a specific friend before.
-- An iOS Notification alert to sender and receiver for confirmation of funds is triggered through the event logs.
+- An notification alert will be sent to sender and receiver for confirmation of funds is triggered through the event logs.
 - Customizable Privacy for what is displayed in the activity tab.
 
 # Images

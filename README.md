@@ -34,7 +34,7 @@ Please click on the thumbnail below to view our demo.
 
 
 # Workflow
-
+## User Onboarding
 ### Sign Up:
 - Secure & easy onboarding using account abstraction and EIP 4337 smart accounts.
 - Wallet created through faceID using turnkey to generate a signer wallet for the smart account.

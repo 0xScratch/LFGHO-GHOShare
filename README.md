@@ -95,6 +95,9 @@ The protocol allows for a combination of transactions where the user can supply 
 ## Payment Protocol Diagram
 ![GhoShare Payment Protocol](https://github.com/nkoorty/ghoshare/assets/80065244/aecfd5d8-c096-44ea-b7f5-e33bd8191ab1)
 
+## Workflow to Deposit Savinggs
+![Screenshot 2024-02-08 at 11 48 15](https://github.com/nkoorty/ghoshare/assets/80065244/922de6de-d36c-4e31-a082-c582bc33e760)
+
 
 # The GhoShare team
 - [Jeevan Jutla](https://www.linkedin.com/in/jeevan-jutla/) - Backend Developer, prev Binance Security Engineer
